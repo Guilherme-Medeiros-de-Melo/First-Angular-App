@@ -1,4 +1,4 @@
-import { Component, computed, Input, input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 import { DUMMY_USERS } from './dummy-users';
 
@@ -14,23 +14,19 @@ import { DUMMY_USERS } from './dummy-users';
 
 export class UserComponent {
   //Regular, zone.js
-  //@Input({required:true}) avatar!:string;
-  //@Input({required:true}) userName!:string;
+  @Input({required:true}) avatar!:string;
+  @Input({required:true}) userName!:string;
 
   //Signal
-  avatar = input.required<string>();
-  userName = input.required<string>();
+  //avatar = input.required<string>();
+  //userName = input.required<string>();
 
   selectedUser = DUMMY_USERS[this.generateRandomUserIndex()];
 
-  //get imagePath(){
-  //  return 'assets/users/' + this.avatar
-  //}
+  get imagePath(){
+    return 'assets/users/' + this.avatar
+  }
   
-  imagePath = computed(() => {
-    return 'assets/users/' + this.avatar();
-  });
-
   onSelectUser(){
     this.selectedUser = DUMMY_USERS[this.generateRandomUserIndex()];
   }
