@@ -23,7 +23,7 @@ export class UserComponent {
   //userName = input.required<string>();
 
   //Both lines bellow do the exact same event variable
-  //@Output() select = new EventEmitter();
+  //@Output() select = new EventEmitter<number>();
   select = output<number>();
   
   get imagePath(){
