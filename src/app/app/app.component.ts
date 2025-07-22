@@ -5,13 +5,10 @@ import { UserComponent } from '../user/user.component';
 import { DUMMY_USERS } from '../user/dummy-users';
 import { TaskComponent } from "../task/task.component";
 
-//Loops for Angular 17 and earlier
-import { NgFor, NgIf } from '@angular/common';
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, TaskComponent, NgFor, NgIf],
+  imports: [HeaderComponent, UserComponent, TaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
