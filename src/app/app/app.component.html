@@ -8,5 +8,10 @@
     </li>
     }
   </ul>
-  <app-task [id]="selectedUser?.id" [name]="selectedUser?.name" />
-</main>
+  @if (selectedUserId) {
+    <app-task [id]="selectedUser?.id" [name]="selectedUser?.name" />
+  }
+  @else {
+    <p id="fallback">No user selected.</p>
+  }
+  </main>
