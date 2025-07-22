@@ -2,7 +2,17 @@ import { Component, EventEmitter, Input, input, output, Output } from '@angular/
 
 import { DUMMY_USERS } from './dummy-users';
 
-//const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
+type User = {
+    id: number;
+    avatar: string;
+    name: string;
+  };
+
+  interface UserInterface {
+    id: number;
+    avatar: string;
+    name: string;
+  };
 
 @Component({
   selector: 'app-user',
@@ -14,9 +24,7 @@ import { DUMMY_USERS } from './dummy-users';
 
 export class UserComponent {
   //Regular, zone.js
-  @Input({required:true}) id!:number
-  @Input({required:true}) avatar!:string;
-  @Input({required:true}) userName!:string;
+  @Input({required:true}) user!: User;
 
   //Signal
   //avatar = input.required<string>();
@@ -27,11 +35,11 @@ export class UserComponent {
   select = output<number>();
   
   get imagePath(){
-    return 'assets/users/' + this.avatar
+    return 'assets/users/' + this.user.avatar
   }
   
   onSelectUser(){
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
 
   generateRandomUserIndex(){
