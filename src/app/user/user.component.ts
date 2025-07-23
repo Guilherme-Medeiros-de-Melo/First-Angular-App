@@ -19,6 +19,7 @@ import { DUMMY_USERS } from './dummy-users';
 export class UserComponent {
   //Regular, zone.js
   @Input({required:true}) user!: User;
+  @Input({required:true}) selected!: boolean;
 
   //Signal
   //avatar = input.required<string>();
