@@ -1,12 +1,6 @@
 import { Component, EventEmitter, Input, input, output, Output } from '@angular/core';
-
+import { type User } from './user.model';
 import { DUMMY_USERS } from './dummy-users';
-
-type User = {
-    id: number;
-    avatar: string;
-    name: string;
-  };
 
   interface UserInterface {
     id: number;
