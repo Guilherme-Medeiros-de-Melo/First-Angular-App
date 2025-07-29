@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { TaskComponent } from './task/task.component';
+import { Component, inject, Input } from '@angular/core';
 import { NewTaskComponent } from "./new-task/new-task.component";
+import { TaskComponent } from './task/task.component';
 import { NewTaskData } from './task/task.model';
 import { TasksService } from './tasks.service';
 
@@ -12,7 +12,7 @@ import { TasksService } from './tasks.service';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  constructor(private tasksService: TasksService){}
+  private tasksService = inject(TasksService);
 
   @Input({required:true}) userId!: number;
   @Input({required:true}) name!: string;
