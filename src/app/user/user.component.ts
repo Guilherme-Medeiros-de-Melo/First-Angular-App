@@ -1,7 +1,6 @@
-import { Component, EventEmitter, Input, input, output, Output } from '@angular/core';
+import { Component, Input, output } from '@angular/core';
 import { type User } from './user.model';
 import { DUMMY_USERS } from './dummy-users';
-import { CardComponent } from "../ui/card/card.component";
 
   interface UserInterface {
     id: number;
@@ -11,8 +10,7 @@ import { CardComponent } from "../ui/card/card.component";
 
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [CardComponent],
+  standalone: false,
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
