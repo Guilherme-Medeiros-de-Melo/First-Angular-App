@@ -3,7 +3,6 @@
   border-radius: 8px;
   max-height: 60vh;
   overflow: auto;
-  background-color: #3a2c54;
 }
 
 header {
@@ -29,7 +28,7 @@ menu {
 menu button {
   font: inherit;
   cursor: pointer;
-  background-color: #9965dd;
+  background-color: #15ac22;
   border-radius: 4px;
   border: none;
   padding: 0.35rem 0.8rem;
@@ -38,7 +37,7 @@ menu button {
 
 menu button:hover,
 menu button:active {
-  background-color: #a565dd
+  background-color: #08440d
 }
 
 ul {

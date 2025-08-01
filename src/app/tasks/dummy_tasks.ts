@@ -4,22 +4,22 @@ export const DUMMY_TASKS = [
       userId: 1,
       title: 'Learn Angular',
       summary:
-        'Learn all the basic and advanced features of Angular & how to apply them.',
-      dueDate: '2025-12-31',
+        'Learn all the Angular basics.',
+      dueDate: '2025-10-24',
     },
     {
       id: 2,
       userId: 2,
       title: 'Build first prototype',
-      summary: 'Build a first prototype of the online shop website',
-      dueDate: '2024-05-31',
+      summary: 'Build a first prototype website',
+      dueDate: '2025-08-02',
     },
     {
       id: 3,
       userId: 2,
-      title: 'Prepare issue template',
+      title: 'Plan first real website',
       summary:
-        'Prepare and describe an issue template which will help with project management',
-      dueDate: '2024-06-15',
+        'Create a plan for building a real enterprise website.',
+      dueDate: '2025-12-31',
     },
   ]
